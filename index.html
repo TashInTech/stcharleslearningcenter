@@ -129,9 +129,12 @@
   header.site-header{
     position:fixed;
     top:0;left:0;right:0;
+    width:100%;
     z-index:500;
     background:var(--paper);
     box-shadow:0 2px 0 var(--line);
+    transform:translateZ(0);
+    will-change:transform;
   }
   .topbar{
     background:var(--plum-deep);
@@ -262,7 +265,7 @@
     padding:38px 42px;
   }
   .hero h1{
-    font-size:clamp(2.4rem, 5vw, 3.6rem);
+    font-size:clamp(1.9rem, 6.5vw, 3.6rem);
     font-weight:800;
     color:#fff;
     max-width:14ch;
@@ -672,6 +675,12 @@
     gap:20px;
     text-align:center;
   }
+  .stat{
+    background:var(--cream);
+    border-radius:20px;
+    padding:24px 16px;
+    box-shadow:var(--shadow-sm);
+  }
   .stat h3{
     font-size:clamp(1.7rem,3vw,2.3rem);
     color:var(--plum);
@@ -723,7 +732,6 @@
         <li><a href="#gallery">Media</a></li>
       </ul>
       <div class="nav-cta">
-        <a class="btn btn-accent" href="#contact"><span class="btn-label">Contact Us</span></a>
         <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
       </div>
     </div>
@@ -775,7 +783,7 @@
     </div>
     <div class="impact-grid">
       <div class="impact-card reveal-left">
-        <div class="impact-frame"><img src="images/3.webp" alt="Students at St.Charles Learning Center"></div>
+        <div class="impact-frame"><img loading="lazy" decoding="async" src="images/3.webp" alt="Students at St.Charles Learning Center"></div>
         <div class="impact-panel">
           <div class="panel-top">
             <span class="impact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
@@ -786,7 +794,7 @@
         </div>
       </div>
       <div class="impact-card reveal-left">
-        <div class="impact-frame"><img src="images/staff.webp" alt="St.Charles teaching staff"></div>
+        <div class="impact-frame"><img loading="lazy" decoding="async" src="images/staff.webp" alt="St.Charles teaching staff"></div>
         <div class="impact-panel">
           <div class="panel-top">
             <span class="impact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
@@ -797,7 +805,7 @@
         </div>
       </div>
       <div class="impact-card reveal-right">
-        <div class="impact-frame"><img src="images/community.webp" alt="Community members at the school"></div>
+        <div class="impact-frame"><img loading="lazy" decoding="async" src="images/community.webp" alt="Community members at the school"></div>
         <div class="impact-panel">
           <div class="panel-top">
             <span class="impact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
@@ -808,7 +816,7 @@
         </div>
       </div>
       <div class="impact-card reveal-right">
-        <div class="impact-frame"><img src="images/5.jpg" alt="School building under the Uganda flag"></div>
+        <div class="impact-frame"><img loading="lazy" decoding="async" src="images/5.jpg" alt="School building under the Uganda flag"></div>
         <div class="impact-panel">
           <div class="panel-top">
             <span class="impact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
@@ -827,7 +835,7 @@
   <div class="wrap">
     <div class="about-media reveal-left">
       <div class="about-badge"><strong>2022</strong><span>Existing since</span></div>
-      <div class="photo-main"><img src="images/teaching.jpg" alt="Teacher working with pupils at St.Charles"></div>
+      <div class="photo-main"><img loading="lazy" decoding="async" src="images/teaching.jpg" alt="Teacher working with pupils at St.Charles"></div>
     </div>
     <div class="about-content reveal-right">
       <span class="eyebrow">About us</span>
@@ -903,12 +911,12 @@
       <h2 class="reveal-right">The beautiful moments keep us going</h2>
     </div>
     <div class="gallery-grid">
-      <a class="reveal-left" href="#" target="_blank" rel="noopener"><img src="images/excel.webp" alt="School gallery photo"></a>
-      <a class="reveal-right" href="#" target="_blank" rel="noopener"><img src="images/7.jpg" alt="School gallery photo"></a>
-      <a class="reveal-left" href="#" target="_blank" rel="noopener"><img src="images/students.jpg" alt="School gallery photo"></a>
-      <a class="reveal-right" href="#" target="_blank" rel="noopener"><img src="images/4.webp" alt="School gallery photo"></a>
-      <a class="reveal-left" href="#" target="_blank" rel="noopener"><img src="images/class2.webp" alt="School gallery photo"></a>
-      <a class="reveal-right" href="#" target="_blank" rel="noopener"><img src="images/3.webp" alt="School gallery photo"></a>
+      <a class="reveal-left" href="#" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="images/excel.webp" alt="School gallery photo"></a>
+      <a class="reveal-right" href="#" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="images/7.jpg" alt="School gallery photo"></a>
+      <a class="reveal-left" href="#" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="images/students.jpg" alt="School gallery photo"></a>
+      <a class="reveal-right" href="#" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="images/4.webp" alt="School gallery photo"></a>
+      <a class="reveal-left" href="#" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="images/class2.webp" alt="School gallery photo"></a>
+      <a class="reveal-right" href="#" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="images/3.webp" alt="School gallery photo"></a>
     </div>
   </div>
 </section>
@@ -927,7 +935,7 @@
       </div>
       <a class="btn btn-plum" style="margin-top:22px;" href="#contact">Support this project</a>
     </div>
-    <div class="project-photo reveal-right"><img src="images/building.webp" alt="New classroom block under construction"></div>
+    <div class="project-photo reveal-right"><img loading="lazy" decoding="async" src="images/building.webp" alt="New classroom block under construction"></div>
   </div>
 </section>
 
@@ -973,7 +981,7 @@
   <div class="wrap footer-top">
     <div class="footer-grid">
       <div class="footer-brand reveal-left">
-        <img src="images/stcharles_logo.png" alt="St.Charles Learning Center crest">
+        <img loading="lazy" decoding="async" src="images/stcharles_logo.png" alt="St.Charles Learning Center crest">
         <p>Providing safe, inclusive and life-changing learning opportunities for vulnerable children in Kamarya Village.</p>
         <div class="footer-social">
           <a href="#" aria-label="Facebook"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></a>
