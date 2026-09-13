@@ -65,8 +65,8 @@
     --radius: 22px;
     --header-h: 108px;
   }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
+  *{box-sizing:border-box;min-width:0;}
+  html{scroll-behavior:smooth;overflow-x:hidden;}
   body{
     margin:0;
     font-family:'Work Sans', sans-serif;
@@ -75,6 +75,8 @@
     -webkit-font-smoothing:antialiased;
     padding-top:var(--header-h);
     overflow-x:hidden;
+    overflow-wrap:break-word;
+    word-break:break-word;
   }
   h1,h2,h3,h4{
     font-family:'Baloo 2', sans-serif;
@@ -171,10 +173,11 @@
     height:68px;
     gap:18px;
   }
-  .brand{display:flex;align-items:center;gap:12px;}
-  .brand img{height:44px;width:auto;}
-  .brand-text{font-family:'Baloo 2';font-weight:700;font-size:1.05rem;color:var(--plum-deep);line-height:1.1;}
-  .brand-text span{display:block;font-family:'Work Sans';font-weight:500;font-size:0.68rem;color:var(--muted);letter-spacing:0.03em;}
+  .brand{display:flex;align-items:center;gap:12px;min-width:0;overflow:hidden;}
+  .brand img{height:44px;width:auto;flex:none;}
+  .brand-text{font-family:'Baloo 2';font-weight:700;font-size:1.05rem;color:var(--plum-deep);line-height:1.1;min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+  .brand-text span{display:block;font-family:'Work Sans';font-weight:500;font-size:0.68rem;color:var(--muted);letter-spacing:0.03em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .nav-cta{flex:none;}
 
   .nav-links{display:flex;align-items:center;gap:6px;}
   .nav-links a{
@@ -220,6 +223,12 @@
     .nav-cta .btn span.btn-label{display:none;}
     .topbar-left{gap:12px;}
     .topbar .wrap{font-size:0.72rem;height:auto;padding-top:6px;padding-bottom:6px;flex-wrap:wrap;row-gap:4px;}
+    .brand-text{max-width:150px;}
+  }
+  @media (max-width:400px){
+    .brand-text span{display:none;}
+    .brand-text{max-width:none;}
+    nav.mainnav .wrap{gap:10px;}
   }
 
   /* ---------- HERO ---------- */
@@ -911,12 +920,12 @@
       <h2 class="reveal-right">The beautiful moments keep us going</h2>
     </div>
     <div class="gallery-grid">
-      <a class="reveal-left" href="#" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="images/excel.webp" alt="School gallery photo"></a>
-      <a class="reveal-right" href="#" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="images/7.jpg" alt="School gallery photo"></a>
-      <a class="reveal-left" href="#" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="images/students.jpg" alt="School gallery photo"></a>
-      <a class="reveal-right" href="#" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="images/4.webp" alt="School gallery photo"></a>
-      <a class="reveal-left" href="#" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="images/class2.webp" alt="School gallery photo"></a>
-      <a class="reveal-right" href="#" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="images/3.webp" alt="School gallery photo"></a>
+      <a class="reveal-left" href="images/excel.webp" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="images/excel.webp" alt="School gallery photo"></a>
+      <a class="reveal-right" href="images/7.jpg" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="images/7.jpg" alt="School gallery photo"></a>
+      <a class="reveal-left" href="images/students.jpg" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="images/students.jpg" alt="School gallery photo"></a>
+      <a class="reveal-right" href="images/4.webp" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="images/4.webp" alt="School gallery photo"></a>
+      <a class="reveal-left" href="images/class2.webp" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="images/class2.webp" alt="School gallery photo"></a>
+      <a class="reveal-right" href="images/3.webp" target="_blank" rel="noopener"><img loading="lazy" decoding="async" src="images/3.webp" alt="School gallery photo"></a>
     </div>
   </div>
 </section>
